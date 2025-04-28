@@ -1,0 +1,513 @@
+---
+title: "Protected Income and Inequality Aversion"
+author: "Eduardo Zambrano (Cal Poly) and Marc Fleurbaey (PSE)"
+format:
+  revealjs: 
+    theme: default
+    html-math-method: mathjax
+---
+
+#### This material is based upon work supported by the National Science Foundation under Grant # 2313969
+
+## Outline of a research program
+
+::: {.incremental}
+- **`Protected Income and Inequality Aversion`** (This paper)
+- **Social Preferences Under Uncertainty and Ambiguity**
+- **`Inequality Sensitive Optimal Treatment Assignment`**
+- Egalitarian Equivalent Treatment Effect Estimation
+- Inequality Aversion Elicitation in Theory and in Practice
+:::
+
+# Protected Income and Inequality Aversion
+
+- **With Marc Fleurbaey - PSE** 
+
+##
+- Consider a population of $n$ individuals
+- Each individual $i$ has a known income $y_{i} \ge 0$.
+
+## Social Preferences
+- $W\left(y_{1},...,y_{n}\right)=\sum_{i=1}^{n}f\left(y_{i}\right)$
+
+
+## Examples (Aki and Bo)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/g4hf7euvtj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 1: The *IN* evaluator "></iframe>
+</div>
+
+::: aside
+$$W\left(y_{1},y_{2}\right)= f\left(y_{1}\right)+f\left(y_{2}\right)$$
+:::
+
+## Examples (Aki and Bo)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/alkwbiy983?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$W\left(y_{1},y_{2}\right)= f\left(y_{1}\right)+f\left(y_{2}\right)$$
+:::
+
+## Examples (Aki and Bo)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/hb5f5bi7c3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$W\left(y_{1},y_{2}\right)= f\left(y_{1}\right)+f\left(y_{2}\right)$$
+:::
+
+## Protected Income: $\ddot{Y}\left(y\right)$
+
+- The smallest a person's income gets along the indifference curve that passes through (y,y).
+
+
+## Inequality Neutral (`IN`)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/g4hf7euvtj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 1: The *IN* evaluator "></iframe>
+</div>
+
+::: aside
+$$f(y)= y
+$$
+
+:::
+
+## Kolm - Pollak (`K-P`)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/alkwbiy983?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+:::
+
+## Kolm - Pollak (`K-P`)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/ibznckd7fj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 2: The *CDPI* evaluator"></iframe>
+</div>
+
+::: aside
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+:::
+
+## Result 1 (`K-P`)
+
+$$
+\ddot{Y}(y) =
+\begin{cases}
+y - \frac{\ln 2}{\alpha} & \text{for } y > \frac{\ln 2}{\alpha} \\
+0 & \text{for } y \le \frac{\ln 2}{\alpha}
+\end{cases}
+$$
+
+::: aside
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+:::
+
+## Kolm - Pollak (`K-P`)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/ibznckd7fj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 2: The *CDPI* evaluator"></iframe>
+</div>
+
+::: aside
+$$
+\ddot{Y}(y) =
+\begin{cases}
+y - \frac{\ln 2}{\alpha} & \text{for } y > \frac{\ln 2}{\alpha} \\
+0 & \text{for } y \le \frac{\ln 2}{\alpha}
+\end{cases}
+$$
+
+:::
+
+## Result 2 (`K-P`)
+
+If we let $\ddot{L} = \frac{\ln 2}{\alpha}$, we can write 
+
+$$f(y)=-2^{-\frac{y}{\ddot{L}}} \text{ for } \ddot{L}>0$$
+
+instead of
+
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+
+::: {.incremental}
+- $\ddot{L}$ is interpreted, in a two person evaluation, as the maximal absolute acceptable loss for Aki regarldless of the size of the gain for Bo.
+:::
+
+## `Kolm - Pollak`: Summary
+
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+
+can be rewritten as
+$$f(y)=-2^{-\frac{y}{\ddot{L}}} \text{ for } \ddot{L}>0.$$
+
+
+::: {.incremental}
+- The `K-P` class never guarantees a positive protected level of income for all values of $y$.
+:::
+
+## Kolm - Atkinson (`K-A`)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/hb5f5bi7c3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$f(y)= \begin{cases}
+\frac{y^{1-\gamma}}{1-\gamma} & \gamma \ne 1,\gamma > 0\\
+\ln y & \gamma=1
+\end{cases}
+$$
+:::
+
+## Result 3 (`K-A`)
+
+$$
+\ddot{Y}(y) =
+\begin{cases}
+2^{\frac{1}{1-\gamma}}y & \text{for } \gamma > 1 \\
+0 & \text{for } \gamma \le 1
+\end{cases}
+$$
+
+::: aside
+$$f(y)= \begin{cases}
+\frac{y^{1-\gamma}}{1-\gamma} & \gamma \ne 1,\gamma \ge 0\\
+\ln y & \gamma=1
+\end{cases}
+$$
+:::
+
+## Two `K-A` evaluators
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/bk7c6i7a0l?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+- The <span style="color: #4682B4;">blue</span> evaluator has $\gamma = 2$
+- The <span style="color: #9370DB;">purple</span> evaluator has $\gamma = \frac{1}{2}$
+:::
+
+## Kolm - Atkinson (`K-A`, $\gamma > 1$)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/hb5f5bi7c3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$f(y)= \frac{y^{1-\gamma}}{1-\gamma} \text{ for } \gamma > 1$$
+:::
+
+## Kolm - Atkinson (`K-A`, $\gamma > 1$)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/kwwwax4bou?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 3: The *CRPI* evaluator"></iframe>
+</div>
+
+::: aside
+$$\ddot{Y}(y) = 2^{\frac{1}{1-\gamma}}y \text{  for } \gamma > 1 $$
+:::
+
+## Result 4 (`K-A`)
+
+If we let $\ddot{\kappa} = 2^{\frac{1}{1-\gamma}}$, we can write 
+
+$$f(y)=\log_2 \ddot{\kappa} \cdot y^{\frac{1}{\log_2 \ddot{\kappa}}}  \text{ for } \ddot{\kappa} \in(0,1)$$
+
+instead of
+
+$$f(y)= \frac{y^{1-\gamma}}{1-\gamma} \text{ for } \gamma > 1.$$
+
+::: {.incremental}
+- $(1 - \ddot{\kappa})$ is interpreted, in a two person evaluation, as the maximal relative acceptable loss for Aki regarldless of the size of the gain for Bo.
+:::
+
+## `Kolm - Atkinson`: Summary
+
+$$f(y)= \frac{y^{1-\gamma}}{1-\gamma} \text{ for } \gamma > 1$$
+
+can be rewritten as
+$$f(y)= \log_2 \ddot{\kappa} \cdot y^{\frac{1}{\log_2 \ddot{\kappa}}} \text{ for } \ddot{\kappa} \in (0,1).$$
+
+
+::: {.incremental}
+- The `K-A` class never guarantees a positive protected level of income for any value of $y$ whenever $\gamma \le 1$.
+
+- The class protects a constant fraction of $y$ whenever $\gamma > 1$.
+:::
+
+# A `new class` of social preferences
+
+## Progressive Protection
+
+Fix $c>0$. Let $f$ be defined for $y \ge c$ by
+
+$$f(y)= \begin{cases}
+\frac{\left(\ln \frac{y}{c}\right)^{1-\rho}}{1-\rho} & \rho \ne 1,\rho > 0\\
+\ln \ln \frac{y}{c} & \rho=1
+\end{cases}
+$$
+
+::: {.incremental}
+
+- $c$ is a normatively determined lower bound on protected income.
+:::
+
+##
+<iframe src="https://equistatlab.shinyapps.io/social-preferences/" width="100%" height="100%" style="border:none;"></iframe>
+
+## Result 5
+
+$$
+\ddot{Y}(y) =
+\begin{cases}
+0 & \text{for } \rho \le 1 \\
+y^{\ddot{\beta}}c^{1-\ddot{\beta}} & \text{for } \rho > 1
+\end{cases}
+$$
+
+where $\ddot{\beta} = 2^{\frac{1}{1-\rho}}.$
+
+::: {.incremental}
+- $\ddot{\beta}$ is the *income elasticity of protected income*.
+- For $\rho > 1$:
+    -  $\ddot{\beta} \in (0,1)$ 
+    -  $\frac{\ddot{Y}(y)}{y}= \left(\frac{c}{y}\right)^{1-\ddot{\beta}}$ is a decreasing function of income.
+:::
+
+## Result 6
+
+Given $\ddot{\beta} = 2^{\frac{1}{1-\rho}}$, we can write 
+
+$$f(y)=\log_2 \ddot{\beta} \cdot \left(\ln \frac{y}{c}\right)^{\frac{1}{\log_2 \ddot{\beta}}}  \text{ for } \ddot{\beta} \in(0,1)$$
+
+instead of
+
+$$f(y)= \frac{\left(\ln \frac{y}{c}\right)^{1-\rho}}{1-\rho} \text{ for } \gamma > 1.$$
+
+## Fork on the Road {#menu}
+
+- [Microcredit application](#meager)
+- [Characterizations](#characterizations)
+- [Conclusions](#conclusions)
+
+## Application: A Bayesian Meta Analysis of the Microcredit Literature {#meager}
+
+::: {.incremental}
+- From **Inequality Sensitive Optimal Treatment Assignment.**
+
+- Meager (2022) estimates posterior distributions of the effect of microcredit interventions on consumption using data from randomized trials that expand access to microcredit in five countries:
+
+        - Bosnia
+        - India
+        - Mexico
+        - Mongolia
+        - Morocco
+:::
+
+<!-- ## Meager's results
+::: {.incremental}
+- Meager reports considerable treatment effect heterogeneity.
+- Large segments of the distribution of consumption are nearly unaffected by the policy (from the 5-th to the 75-th percentiles)
+- This is coupled with with large yet uncertain differences on the upper tails of the distribution of consumption of the treatment and control groups, especially within the group of households with previous business experience.
+- Given that the treatment will probably increase inequality, "the social welfare effects of microcredit are likely to be complex." (Meager 2022, p. 1821).
+::: -->
+
+##
+:::{.callout-note icon=false}
+## Meager's Bayesian hierarchical model
+$$
+y_{ik}(T_{ik}) \sim \texttt{LogNormal}(\mu_k + \zeta_k T_{ik},\sigma_k \lambda_k^{T_{ik}}) \text{ for } k = 1,...,5; 
+$$
+$$
+0.1\mu_k, 0.1\zeta_k, \log(\sigma_k), \log(\lambda_k) \sim \texttt{MvN}(0, 10I) \text{ for } k = 1,...,5.
+$$
+:::
+
+## Inequality Neutral Evaluation
+![Posterior distributions of the average treatment effects ($\tau$). All units are 2009 USD PPP per two weeks.](imported_multiple_sitesE.png)
+
+## Incorporating Inequality Aversion Into the Statistical Framework
+
+:::aside
+$W\left(y_{1},...,y_{n}\right)=\sum_{i=1}^{n}f\left(y_{i}\right)$
+:::
+
+## Egalitarian equivalent 
+
+- $ee(y_{1},...,y_{n})= f^{-1}\left(\frac{1}{n} \sum_{i=1}^{n} f(y_{i})\right)$
+
+- For an inequality averse evaluator, $ee < \mu.$
+
+:::aside
+- $W\left(y_{1},...,y_{n}\right)=\sum_{i=1}^{n}f\left(y_{i}\right)$
+- $\mu = \frac{1}{n} \sum_{i=1}^{n} y_{i}$
+
+:::
+
+<!-- ##
+- I compute egalitarian equivalent treatment effects using Meager's Markov Chain Monte Carlo (MCMC) output, denoted $\hat{\pi}$,  which contains three chains with four thousand draws per chain. -->
+
+## For a `Kolm-Atkinson` Evaluator
+
+and 
+
+$$y_k \sim \texttt{LogNormal}$$
+
+the egalitarian equivalent can be computed using the expression
+
+$$
+ee(y_k(d)) = e^{\mu_k + \zeta_k d + \frac{1}{2}(1 - \gamma) \left(\sigma_k \lambda_k^d\right)^{2}}.
+$$ 
+
+
+for
+$d \in \{0,1\}$.
+
+::: incremental
+
+- Let $\gamma = 2$ ($\ddot{\kappa}=0.5$).
+
+:::
+
+
+
+## Egalitarian Equivalent Treatment Effect (`EETE`)
+$$\tau_{ee}:=ee(1) - ee(0)$$
+
+## Inequality Averse Evaluation
+![Posterior distributions of the average treatment effects ($\tau$) and the egalitarian equivalent treatment effects ($\tau_{ee}$). All units are 2009 USD PPP per two weeks.](imported_multiple_sites.png)
+
+##
+
+|          | $E_{\hat{\pi}}[\tau]$ |$P_{\hat{\pi}}[\tau>0]$| $E_{\hat{\pi}}[\tau_{ee}]$ | $P_{\hat{\pi}}[\tau_{ee}>0]$ |
+|:-:|:-:|:-:|:-:|:-:|
+| Bosnia   | 13.82 | 82.5% | -3.11 | 14.3% |
+| India    | 3.00  | 83.1% | -1.20 | 29.1% |
+| Mexico   | 5.65  | 97.5% | -3.76 | 2.7% |
+| Mongolia | 8.58 | 88.1% | -1.35 | 35.0% |
+| Morocco  | -2.57 | 22.7% | 2.55  | 82.4% |
+
+: Microcredit treatment effect Bayesian estimates
+
+##
+::: {#tbl-elephant}
+![](Meager_table_1.jpg)
+
+Bayesian quantile treatment effects on consumption (from Table 1 in Meager 2022)
+:::
+
+## Summary (I) {#conclusions}
+
+- We uncover an underlying geometric structure in the class of additively separable social preferences that allows us to more transparently:
+    - Characterize
+    - Interpret
+    - Elicit
+
+an evaluator's degree of inequality aversion.
+
+## Summary (II)
+- We discover that many commonly used social preferences may not embody enough inequality aversion, and that the protection they offer to the losers from reform is at best proportional.
+
+## Summary (III)
+
+- We construct a new class of social preferences that would protect a higher fraction of a person's income the lower their income.
+
+::: {.incremental}
+- This class has two parameters:
+
+    - A subsistence level, c.
+    - A *protected income elasticity,* $\ddot{\beta}.$
+:::
+
+## Summary (IV)
+- We show that the methodology is ready to be deployed in complex, realistic program evaluation applications.
+
+![](imported_multiple_sites.png){fig-align="center" width=50%}
+
+## Please visit `https://equistatlab.org/`
+
+<iframe src="https://equistatlab.org/" width="100%" height="600px" style="border:none;"></iframe>
+
+# Thank you!
+![](skeleton.png)
+
+# Extras
+
+## Characterizations {#characterizations}
+
+## Protected Income (against 2)
+
+Let $y_{1}(y_{2},y_{3},y)$ be defined implicitly by the equation 
+
+$$f(y_{1}(y_{2}, y_{3},y)) + f(y_{2})+ f(y_{3}) = 3 f(y).$$ 
+
+Let
+
+$$\dddot{Y}(y):=\inf\left\{ y_{1}(y_{2},y_{3},y)|(y_{2},y_{3},y)\in D_{123}\right\} $$
+
+## Result 7
+
+- $\dddot{Y}(y)= y - \frac{\ln 3}{\alpha}$ for the `K-P` class with $y > \frac{\ln 3}{\alpha}.$
+
+- $\dddot{Y}(y)= 3^{\frac{1}{1-\gamma}}y$ for the `K-A` class with $\gamma > 1$.
+
+- $\dddot{Y}(y) = y^{\dddot{\beta}}c^{1-\dddot{\beta}}$ for the `new class` with $\rho >1$ and $\dddot{\beta}=3^{\frac{1}{1-\rho}}$.
+
+## Side by side
+
+- For the `K-P` class:
+    - $\ddot{Y}(y)= y - \frac{\ln 2}{\alpha}$ with $y > \frac{\ln 2}{\alpha}.$
+ 
+    - $\dddot{Y}(y)= y - \frac{\ln 3}{\alpha}$ with $y > \frac{\ln 3}{\alpha}.$
+
+## Side by side
+- For the `K-A` class ($\gamma >1$):
+   - $\ddot{Y}(y)= 2^{\frac{1}{1-\gamma}}y$.
+   - $\dddot{Y}(y)= 3^{\frac{1}{1-\gamma}}y$.
+
+## Side by side
+- for the `new class` ($\rho>1$):
+   - $\ddot{Y}(y) = y^{\ddot{\beta}}c^{1-\ddot{\beta}}$ with $\ddot{\beta}=2^{\frac{1}{1-\rho}}$.
+   - $\dddot{Y}(y) = y^{\dddot{\beta}}c^{1-\dddot{\beta}}$ with $\dddot{\beta}=3^{\frac{1}{1-\rho}}$.
+
+## Result 8
+
+The `Kolm-Pollak` social preferences is (up to an affine transform and above a minimum level of income) characterized by the requirement that there exist $\Omega, \Delta >0$ such that, for all $y > \max$ \{ $\Omega, \Delta$ \}:  
+
+$$\ddot{Y}(y)= y - \Omega \text{ and } \dddot{Y}(y)= y - \Delta.$$ 
+
+One must then have $\Delta = \frac{\ln 2}{\alpha}$ and $\Omega = \frac{\ln 3}{\alpha}$ for some $\alpha > 0.$
+
+## Result 9
+The `Kolm-Atkinson` social preferences with $\gamma > 1$ is (up to an affine transform) characterized by the requirement that there exist $\lambda,\mu \in (0,1)$ such that, for all $y>0$:
+
+$$\ddot{Y}(y) = \lambda y \text{ and } \dddot{Y}(y)=\mu y.$$ 
+
+One must then have $\lambda=2^{\frac{1}{1-\gamma}}$ and $\mu=3^{\frac{1}{1-\gamma}}$ for some $\gamma>1$.
+
+## Result 10
+The `new class` of social preferences with $\rho > 1$ is (up to an affine transform) characterized by the requirement that there exist $\ddot{\beta},\dddot{\beta} \in (0,1), c>0$ such that, for all $y \in (c, \infty)$: 
+
+$$\ddot{Y}(y) = y^{\ddot{\beta}}c^{1-\ddot{\beta}} \text{ and } \dddot{Y}(y) = y^{\dddot{\beta}}c^{1-\dddot{\beta}}.$$
+
+One must then have $\ddot{\beta}=2^{\frac{1}{1-\gamma}}$ and $\dddot{\beta}=3^{\frac{1}{1-\gamma}}$ for some $\rho>1$.
+
+## Back to [the menu](#menu)
+
+<!-- ## PP (I)
+![](subsistence_100.png)
+
+## PP (II)
+![](subsistence_300.png)
+
+## PP (III)
+![](beta_99.png)
+
+## PP (IV)
+![](beta_01.png) -->
+
+
